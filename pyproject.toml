@@ -1,0 +1,17 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "doc-converter"
+version = "0.1.0"
+dependencies = [
+    "click>=8.0"
+]
+
+[project.scripts]
+doc-conv = "doc_converter.cli:cli"
+
+[tool.maturin]
+module-name = "doc_converter.doc_converter_core"
+python-source = "."
